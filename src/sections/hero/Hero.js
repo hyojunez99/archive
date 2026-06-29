@@ -191,7 +191,7 @@ const Hero = () => {
       <div className="hero__right">
         <img
           ref={imageRef}
-          src={`/images/${issue.coverImage}`}
+          src={`${process.env.PUBLIC_URL}/images/${issue.coverImage}`}
           alt={issue.title}
         />
       </div>
