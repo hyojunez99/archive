@@ -1,0 +1,355 @@
+@use "../../assets/scss/font" as f;
+@use "../../assets/scss/mixin" as m;
+
+.hero {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+
+  background: #f7f5f2;
+
+  &__left {
+    position: absolute;
+
+    left: clamp(60px, 7vw, 130px);
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: min(540px, 42vw);
+
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__issue {
+    margin-bottom: 26px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+
+    color: #8b74ff;
+  }
+
+  &__title {
+    margin: 0;
+
+    font-family: f.$font-serif;
+    font-size: clamp(78px, 7vw, 130px);
+    font-weight: 400;
+
+    line-height: 0.88;
+    letter-spacing: -0.05em;
+
+    color: #111;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__description {
+    margin-top: 38px;
+
+    max-width: 430px;
+
+    font-size: 17px;
+    line-height: 1.9;
+
+    color: #444;
+  }
+
+  &__season {
+    margin-top: 34px;
+
+    font-size: 12px;
+
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+
+    color: #111;
+  }
+
+  &__button {
+    margin-top: 54px;
+
+    width: fit-content;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+
+    color: #111;
+
+    position: relative;
+
+    transition: 0.35s;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      bottom: -8px;
+
+      width: 0;
+      height: 1px;
+
+      background: #111;
+
+      transition: 0.35s;
+    }
+
+    &:hover {
+      letter-spacing: 0.34em;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  &__controls {
+    margin-top: 60px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+  }
+
+  &__controls button {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(0, 0, 0, 0.15);
+
+    background: rgba(255, 255, 255, 0.85);
+
+    backdrop-filter: blur(10px);
+
+    cursor: pointer;
+
+    transition: 0.35s;
+
+    font-size: 18px;
+
+    &:hover {
+      background: #111;
+      color: #fff;
+      border-color: #111;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+
+    gap: 14px;
+
+    span {
+      width: 10px;
+      height: 10px;
+
+      border-radius: 50%;
+
+      border: 1px solid #888;
+
+      cursor: pointer;
+
+      transition: 0.35s;
+
+      &.active {
+        background: #111;
+        border-color: #111;
+
+        transform: scale(1.3);
+      }
+    }
+  }
+
+  &__progress {
+    margin-top: 30px;
+
+    width: 340px;
+    max-width: 100%;
+
+    height: 2px;
+
+    background: rgba(0, 0, 0, 0.12);
+
+    overflow: hidden;
+
+    span {
+      display: block;
+
+      width: 0;
+
+      height: 100%;
+
+      background: #111;
+    }
+  }
+
+  &__right {
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    width: 74%;
+    height: 100%;
+
+    z-index: 1;
+
+    overflow: hidden;
+  }
+
+  &__right img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+  }
+
+  &__right::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+      90deg,
+      rgba(247, 245, 242, 0.95) 0%,
+      rgba(247, 245, 242, 0.82) 18%,
+      rgba(247, 245, 242, 0.55) 35%,
+      rgba(247, 245, 242, 0.18) 55%,
+      rgba(247, 245, 242, 0) 75%
+    );
+
+    pointer-events: none;
+  }
+}
+
+@include m.tablet {
+  .hero {
+    &__left {
+      left: 60px;
+
+      width: 60%;
+    }
+
+    &__right {
+      width: 100%;
+    }
+
+    &__title {
+      font-size: clamp(64px, 8vw, 90px);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    position: relative;
+
+    height: 100vh;
+    min-height: 100vh;
+
+    &__right {
+      position: absolute;
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+    }
+
+    &__right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__right::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background: linear-gradient(
+        to top,
+        rgba(247, 245, 242, 0.95) 0%,
+        rgba(247, 245, 242, 0.65) 30%,
+        rgba(247, 245, 242, 0.25) 55%,
+        rgba(247, 245, 242, 0) 100%
+      );
+    }
+
+    &__left {
+      position: absolute;
+
+      left: 24px;
+      right: 24px;
+      bottom: 60px;
+
+      top: auto;
+      transform: none;
+
+      width: auto;
+
+      padding: 0;
+
+      z-index: 20;
+    }
+
+    &__title {
+      font-size: clamp(48px, 13vw, 72px);
+    }
+
+    &__description {
+      max-width: 100%;
+      margin-top: 24px;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    &__season {
+      margin-top: 20px;
+    }
+
+    &__button {
+      margin-top: 32px;
+    }
+
+    &__controls {
+      margin-top: 36px;
+      gap: 16px;
+    }
+
+    &__controls button {
+      width: 44px;
+      height: 44px;
+    }
+
+    &__progress {
+      width: 100%;
+      margin-top: 24px;
+    }
+  }
+}

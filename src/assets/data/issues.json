@@ -1,0 +1,74 @@
+[
+  {
+    "id": "01",
+    "slug": "future-of-fashion",
+    "title": "Future Of Fashion",
+    "season": "Spring / Summer 2026",
+    "coverImage": "issue01.png",
+    "description": "Exploring the intersection of fashion, culture, and innovation.",
+    "publishedAt": "2026-03-01"
+  },
+  {
+    "id": "02",
+    "slug": "the-language-of-silence",
+    "title": "The Language of Silence",
+    "season": "Winter 2025",
+    "coverImage": "issue02.png",
+    "description": "A study of minimal expression and contemporary elegance.",
+    "publishedAt": "2025-12-01"
+  },
+  {
+    "id": "03",
+    "slug": "new-perspectives",
+    "title": "New Perspectives",
+    "season": "Autumn 2025",
+    "coverImage": "issue03.png",
+    "description": "Redefining visual narratives through modern editorial design.",
+    "publishedAt": "2025-09-01"
+  },
+  {
+    "id": "04",
+    "slug": "reimagining-classics",
+    "title": "Reimagining Classics",
+    "season": "Spring 2025",
+    "coverImage": "issue04.png",
+    "description": "A contemporary reinterpretation of timeless fashion icons.",
+    "publishedAt": "2025-03-01"
+  },
+  {
+    "id": "05",
+    "slug": "the-beginning",
+    "title": "The Beginning",
+    "season": "Winter 2024",
+    "coverImage": "issue05.png",
+    "description": "Exploring the origins of modern style and visual culture.",
+    "publishedAt": "2024-12-01"
+  },
+  {
+    "id": "06",
+    "slug": "beyond-materials",
+    "title": "Beyond Materials",
+    "season": "Autumn 2024",
+    "coverImage": "issue06.png",
+    "description": "Investigating sustainability and innovation in textile design.",
+    "publishedAt": "2024-09-01"
+  },
+  {
+    "id": "07",
+    "slug": "digital-identity",
+    "title": "Digital Identity",
+    "season": "Summer 2024",
+    "coverImage": "issue07.png",
+    "description": "How technology shapes identity, aesthetics, and self-expression.",
+    "publishedAt": "2024-06-01"
+  },
+  {
+    "id": "08",
+    "slug": "timeless-forms",
+    "title": "Timeless Forms",
+    "season": "Spring 2024",
+    "coverImage": "issue08.png",
+    "description": "Celebrating enduring silhouettes and iconic design principles.",
+    "publishedAt": "2024-03-01"
+  }
+]

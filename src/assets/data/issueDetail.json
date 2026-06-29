@@ -1,0 +1,257 @@
+[
+  {
+    "id": 1,
+    "hero": {
+      "title": "Future Of Fashion",
+      "subtitle": "Exploring the intersection of fashion, culture, and innovation.",
+      "season": "SPRING / SUMMER 2026",
+      "date": "March 1, 2026",
+      "heroImage": "issue01.png"
+    },
+    "intro": {
+      "heading": "Fashion is evolving through innovation and creativity.",
+      "text": "Future Of Fashion explores how technology, sustainability, and contemporary culture are reshaping the fashion industry.\n\nThis issue celebrates designers and creators who redefine the future through bold experimentation.",
+      "image": "issue01.png"
+    },
+    "story": {
+      "image": "issue02.png",
+      "text": "Innovation is no longer optional. Fashion now embraces digital craftsmanship, sustainable production, and new visual languages that inspire future generations."
+    },
+    "quote": {
+      "text": "The future belongs to those who imagine it.",
+      "author": "ARCHIVE STUDIO"
+    },
+    "galleryDescription": "Behind the scenes of Future Of Fashion.",
+    "gallery": [
+      "issue01.png",
+      "issue02.png",
+      "issue03.png",
+      "issue04.png",
+      "issue05.png"
+    ]
+  },
+
+  {
+    "id": 2,
+    "hero": {
+      "title": "The Language Of Silence",
+      "subtitle": "A study of minimal expression and contemporary elegance.",
+      "season": "WINTER 2025",
+      "date": "December 1, 2025",
+      "heroImage": "issue02.png"
+    },
+    "intro": {
+      "heading": "Silence can express more than decoration.",
+      "text": "Minimalism reveals the beauty of restraint and thoughtful composition.\n\nThrough calm forms and subtle details, fashion becomes timeless.",
+      "image": "issue02.png"
+    },
+    "story": {
+      "image": "issue03.png",
+      "text": "Quiet aesthetics encourage deeper appreciation for craftsmanship, proportion, and texture instead of excessive ornament."
+    },
+    "quote": {
+      "text": "True elegance whispers.",
+      "author": "ARCHIVE STUDIO"
+    },
+    "galleryDescription": "Visual moments from The Language Of Silence.",
+    "gallery": [
+      "issue02.png",
+      "issue03.png",
+      "issue04.png",
+      "issue05.png",
+      "issue06.png"
+    ]
+  },
+
+  {
+    "id": 3,
+    "hero": {
+      "title": "New Perspectives",
+      "subtitle": "Redefining visual narratives through modern editorial design.",
+      "season": "AUTUMN 2025",
+      "date": "September 1, 2025",
+      "heroImage": "issue03.png"
+    },
+    "intro": {
+      "heading": "Every perspective changes the story.",
+      "text": "Editorial photography evolves through new viewpoints, fresh storytelling, and experimental composition.",
+      "image": "issue03.png"
+    },
+    "story": {
+      "image": "issue04.png",
+      "text": "Creative direction today combines photography, typography, and digital experiences into immersive visual narratives."
+    },
+    "quote": {
+      "text": "Perspective creates possibility.",
+      "author": "ARCHIVE STUDIO"
+    },
+    "galleryDescription": "Creative process behind New Perspectives.",
+    "gallery": [
+      "issue03.png",
+      "issue04.png",
+      "issue05.png",
+      "issue06.png",
+      "issue07.png"
+    ]
+  },
+
+  {
+    "id": 4,
+    "hero": {
+      "title": "Reimagining Classics",
+      "subtitle": "A contemporary reinterpretation of timeless fashion icons.",
+      "season": "SPRING 2025",
+      "date": "March 1, 2025",
+      "heroImage": "issue04.png"
+    },
+    "intro": {
+      "heading": "Classic never means outdated.",
+      "text": "Historic silhouettes inspire today's designers to reinterpret timeless beauty through modern craftsmanship.",
+      "image": "issue04.png"
+    },
+    "story": {
+      "image": "issue05.png",
+      "text": "The classics continue evolving because every generation discovers a new meaning in familiar forms."
+    },
+    "quote": {
+      "text": "Timeless design never fades.",
+      "author": "ARCHIVE STUDIO"
+    },
+    "galleryDescription": "Behind Reimagining Classics.",
+    "gallery": [
+      "issue04.png",
+      "issue05.png",
+      "issue06.png",
+      "issue07.png",
+      "issue08.png"
+    ]
+  },
+
+  {
+    "id": 5,
+    "hero": {
+      "title": "The Beginning",
+      "subtitle": "Exploring the origins of modern style and visual culture.",
+      "season": "WINTER 2024",
+      "date": "December 1, 2024",
+      "heroImage": "issue05.png"
+    },
+    "intro": {
+      "heading": "Every story has a beginning.",
+      "text": "Fashion history provides endless inspiration for the present and the future.",
+      "image": "issue05.png"
+    },
+    "story": {
+      "image": "issue06.png",
+      "text": "Looking back allows us to better understand how style continues evolving through culture."
+    },
+    "quote": {
+      "text": "Every future starts with a beginning.",
+      "author": "ARCHIVE STUDIO"
+    },
+    "galleryDescription": "The origin of the story.",
+    "gallery": [
+      "issue05.png",
+      "issue06.png",
+      "issue07.png",
+      "issue08.png",
+      "issue01.png"
+    ]
+  },
+
+  {
+    "id": 6,
+    "hero": {
+      "title": "Beyond Materials",
+      "subtitle": "Investigating sustainability and innovation in textile design.",
+      "season": "AUTUMN 2024",
+      "date": "September 1, 2024",
+      "heroImage": "issue06.png"
+    },
+    "intro": {
+      "heading": "Materials shape the future.",
+      "text": "Responsible production begins with responsible materials and conscious innovation.",
+      "image": "issue06.png"
+    },
+    "story": {
+      "image": "issue07.png",
+      "text": "New fibers and sustainable technologies redefine luxury without sacrificing quality."
+    },
+    "quote": {
+      "text": "Innovation begins with materials.",
+      "author": "ARCHIVE STUDIO"
+    },
+    "galleryDescription": "Material innovation gallery.",
+    "gallery": [
+      "issue06.png",
+      "issue07.png",
+      "issue08.png",
+      "issue01.png",
+      "issue02.png"
+    ]
+  },
+
+  {
+    "id": 7,
+    "hero": {
+      "title": "Digital Identity",
+      "subtitle": "How technology shapes identity and self-expression.",
+      "season": "SUMMER 2024",
+      "date": "June 1, 2024",
+      "heroImage": "issue07.png"
+    },
+    "intro": {
+      "heading": "Identity is becoming increasingly digital.",
+      "text": "Technology transforms how fashion is created, consumed, and experienced.",
+      "image": "issue07.png"
+    },
+    "story": {
+      "image": "issue08.png",
+      "text": "Digital fashion, virtual runways, and AI continue expanding creative possibilities."
+    },
+    "quote": {
+      "text": "Identity evolves with technology.",
+      "author": "ARCHIVE STUDIO"
+    },
+    "galleryDescription": "Inside Digital Identity.",
+    "gallery": [
+      "issue07.png",
+      "issue08.png",
+      "issue01.png",
+      "issue02.png",
+      "issue03.png"
+    ]
+  },
+
+  {
+    "id": 8,
+    "hero": {
+      "title": "Timeless Forms",
+      "subtitle": "Celebrating enduring silhouettes and iconic design.",
+      "season": "SPRING 2024",
+      "date": "March 1, 2024",
+      "heroImage": "issue08.png"
+    },
+    "intro": {
+      "heading": "Great design remains timeless.",
+      "text": "Simple forms endure because they transcend trends and generations.",
+      "image": "issue08.png"
+    },
+    "story": {
+      "image": "issue01.png",
+      "text": "The most memorable designs balance proportion, function, and beauty."
+    },
+    "quote": {
+      "text": "Timelessness is the ultimate luxury.",
+      "author": "ARCHIVE STUDIO"
+    },
+    "galleryDescription": "Timeless Forms collection.",
+    "gallery": [
+      "issue08.png",
+      "issue01.png",
+      "issue02.png",
+      "issue03.png",
+      "issue04.png"
+    ]
+  }
+]

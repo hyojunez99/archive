@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "eyebrow": "/ 01",
+    "title": "Editor's\nLetter",
+    "subtitle": "Future of Editorial",
+    "description": "Inside the future of fashion, identity, and craftsmanship. This issue explores how design continues to shape contemporary culture through timeless aesthetics.",
+    "link": "Read More",
+    "image": "editorial-01.png",
+    "alt": "Fashion Portrait"
+  },
+  {
+    "id": 2,
+    "eyebrow": "/ 02",
+    "title": "Trend\nReport",
+    "subtitle": "The Rise of Sustainable Luxury",
+    "description": "Luxury is no longer defined solely by exclusivity. Today's consumers seek transparency, longevity and meaningful craftsmanship.",
+    "link": "Read More",
+    "image": "editorial-02.png",
+    "alt": "Minimal Fashion"
+  },
+  {
+    "id": 3,
+    "eyebrow": "/ 03",
+    "title": "Minimalism\nBeyond\nAesthetics",
+    "subtitle": "A New Editorial Perspective",
+    "description": "Minimal fashion is more than a visual language. It reflects slower consumption and thoughtful design for everyday living.",
+    "link": "Read More",
+    "image": "editorial-03.png",
+    "alt": "Runway Scene"
+  },
+  {
+    "id": 4,
+    "eyebrow": "/ 04",
+    "title": "Technology Meets\nCraftsmanship",
+    "subtitle": "Digital Atelier",
+    "description": "Emerging technologies are enhancing traditional craftsmanship while preserving the essence of handmade design.",
+    "link": "Read More",
+    "image": "editorial-04.png",
+    "alt": "Editorial Portrait"
+  }
+]

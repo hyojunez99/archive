@@ -1,0 +1,88 @@
+@use "../../../assets/scss/font" as f;
+
+// Base
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  font-family: f.$font-sans;
+  text-decoration: none;
+}
+
+// Primary
+
+.btn-primary {
+  padding: 16px 32px;
+
+  background: var(--neutral-1000);
+  color: var(--neutral-0);
+
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  &:hover {
+    background: var(--neutral-800);
+  }
+}
+
+// Secondary
+
+.btn-secondary {
+  padding: 16px 32px;
+
+  border: 1px solid var(--neutral-1000);
+
+  color: var(--neutral-1000);
+
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  &:hover {
+    background: var(--neutral-1000);
+    color: var(--neutral-0);
+  }
+}
+
+// Text Link
+
+.btn-link {
+  position: relative;
+
+  padding-bottom: 4px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0%;
+    height: 1px;
+
+    background: currentColor;
+
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}

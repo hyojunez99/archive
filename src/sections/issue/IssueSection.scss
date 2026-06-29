@@ -1,0 +1,585 @@
+@use "../../assets/scss/font" as f;
+@use "../../assets/scss/mixin" as m;
+
+.issue-section {
+  padding: 180px 0;
+  background: #f7f5f2;
+
+  overflow: hidden;
+
+  &__top {
+    @include m.container;
+
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 120px;
+    align-items: center;
+
+    margin-bottom: 90px;
+  }
+
+  &__heading,
+  &__description,
+  &__view {
+    will-change: transform, opacity;
+  }
+
+  &__heading {
+    font-family: f.$font-serif;
+    font-size: clamp(72px, 8vw, 110px);
+    line-height: 0.92;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+  }
+
+  &__description {
+    max-width: 230px;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    color: #666;
+  }
+
+  &__view {
+    border: none;
+    background: none;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+
+    color: #111;
+
+    position: relative;
+
+    transition: 0.35s;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      bottom: -8px;
+
+      width: 0;
+      height: 1px;
+
+      background: #111;
+
+      transition: 0.35s;
+    }
+
+    &:hover {
+      letter-spacing: 0.3em;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  &__slider {
+    display: flex;
+    gap: 36px;
+
+    padding: 0 80px 20px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      flex: 0 0 80px;
+    }
+  }
+
+  &__navigation {
+    width: min(1680px, calc(100% - 160px));
+
+    margin: 70px auto 0;
+
+    display: grid;
+    grid-template-columns: 56px 1fr 56px;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__arrow {
+    width: 56px;
+    height: 56px;
+
+    border-radius: 50%;
+    border: 1px solid #ddd;
+
+    background: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    font-size: 22px;
+
+    transition: 0.35s;
+
+    &:hover {
+      background: #111;
+      color: white;
+
+      transform: translateY(-2px);
+    }
+  }
+
+  &__line {
+    position: relative;
+
+    width: 100%;
+    height: 2px;
+
+    overflow: hidden;
+
+    background: #ddd;
+  }
+
+  &__line-fill {
+    height: 100%;
+
+    background: #111;
+
+    transition: width 0.35s ease;
+  }
+
+  &__drag {
+    margin-top: 22px;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+
+    color: #777;
+  }
+
+  @media (max-width: 1280px) {
+    padding: 120px 0;
+
+    &__top {
+      gap: 60px;
+      margin-bottom: 60px;
+    }
+
+    &__heading {
+      font-size: clamp(56px, 7vw, 88px);
+    }
+
+    &__slider {
+      padding: 0 48px 20px;
+    }
+
+    &__navigation {
+      width: min(100%, calc(100% - 96px));
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 80px 0;
+
+    &__top {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+      gap: 20px;
+      margin-bottom: 48px;
+      padding: 0 32px;
+    }
+
+    &__heading {
+      font-size: clamp(48px, 10vw, 72px);
+    }
+
+    &__description {
+      max-width: 100%;
+      font-size: 15px;
+    }
+
+    &__view {
+      justify-self: start;
+    }
+
+    &__slider {
+      padding: 0 32px 16px;
+      gap: 24px;
+
+      &::after {
+        flex: 0 0 32px;
+      }
+    }
+
+    &__navigation {
+      width: calc(100% - 64px);
+      margin-top: 48px;
+      gap: 20px;
+    }
+
+    &__arrow {
+      width: 48px;
+      height: 48px;
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 64px 0;
+
+    &__top {
+      padding: 0 20px;
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    &__heading {
+      font-size: clamp(40px, 12vw, 60px);
+    }
+
+    &__description {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    &__slider {
+      padding: 0 20px 12px;
+      gap: 16px;
+
+      &::after {
+        flex: 0 0 20px;
+      }
+    }
+
+    &__navigation {
+      width: calc(100% - 40px);
+      margin-top: 36px;
+      grid-template-columns: 44px 1fr 44px;
+      gap: 12px;
+    }
+
+    &__arrow {
+      width: 44px;
+      height: 44px;
+      font-size: 16px;
+    }
+
+    &__drag {
+      margin-top: 16px;
+      font-size: 10px;
+      letter-spacing: 0.3em;
+    }
+  }
+}
+
+.issue-card {
+  flex: 0 0 420px;
+
+  width: 420px;
+
+  cursor: pointer;
+
+  will-change: transform, opacity;
+
+  transition: transform 0.55s cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  &:hover {
+    transform: translateY(-14px);
+  }
+
+  &__image {
+    position: relative;
+
+    height: 590px;
+
+    overflow: hidden;
+
+    background: #000;
+
+    border-radius: 2px;
+  }
+
+  &__image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transform-origin: center;
+
+    will-change: transform;
+
+    filter: brightness(0.84);
+
+    transition:
+      transform 1s ease,
+      filter 0.6s ease;
+  }
+
+  &:hover &__image img {
+    filter: brightness(1);
+  }
+
+  &__image::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.82) 0%,
+      rgba(0, 0, 0, 0.35) 45%,
+      rgba(0, 0, 0, 0) 75%
+    );
+
+    transition: 0.4s;
+  }
+
+  &:hover &__image::after {
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.68) 0%,
+      rgba(0, 0, 0, 0.18) 45%,
+      rgba(0, 0, 0, 0) 75%
+    );
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 34px;
+
+    color: white;
+
+    z-index: 2;
+
+    will-change: transform;
+  }
+
+  &__label,
+  &__number,
+  &__title,
+  &__season {
+    will-change: transform, opacity;
+  }
+
+  &__label {
+    font-size: 10px;
+
+    letter-spacing: 0.35em;
+
+    opacity: 0.8;
+  }
+
+  &__number {
+    margin-top: 12px;
+
+    font-family: f.$font-serif;
+
+    font-size: 68px;
+
+    line-height: 1;
+    font-weight: 200;
+  }
+
+  &__title {
+    margin-top: auto;
+
+    max-width: 280px;
+
+    overflow: hidden;
+
+    font-family: f.$font-serif;
+
+    font-size: 50px;
+    line-height: 1.02;
+    font-weight: 400;
+  }
+
+  &__season {
+    margin-top: 18px;
+
+    font-size: 13px;
+
+    letter-spacing: 0.15em;
+
+    opacity: 0.8;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 70px;
+
+    padding: 0 28px;
+
+    background: white;
+
+    color: #111;
+    text-decoration: none;
+
+    border: 1px solid #ececec;
+    border-top: none;
+
+    transition: 0.35s;
+
+    font-size: 11px;
+
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+
+    span:last-child {
+      font-size: 18px;
+    }
+
+    &:hover {
+      background: #111;
+      color: white;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    flex: 0 0 360px;
+    width: 360px;
+
+    &__image {
+      height: 510px;
+    }
+
+    &__number {
+      font-size: 56px;
+    }
+
+    &__title {
+      font-size: 42px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex: 0 0 300px;
+    width: 300px;
+
+    &__image {
+      height: 420px;
+    }
+
+    &__overlay {
+      padding: 24px;
+    }
+
+    &__number {
+      font-size: 48px;
+      margin-top: 8px;
+    }
+
+    &__title {
+      font-size: 34px;
+      max-width: 220px;
+    }
+
+    &__season {
+      margin-top: 12px;
+      font-size: 12px;
+    }
+
+    &__button {
+      height: 60px;
+      padding: 0 22px;
+      font-size: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    flex: 0 0 calc(85vw - 40px);
+    width: calc(85vw - 40px);
+
+    &:hover {
+      transform: none;
+    }
+
+    &__image {
+      height: calc((85vw - 40px) * 1.35);
+    }
+
+    &__overlay {
+      padding: 20px;
+    }
+
+    &__label {
+      font-size: 9px;
+      letter-spacing: 0.3em;
+    }
+
+    &__number {
+      font-size: 40px;
+      margin-top: 6px;
+    }
+
+    &__title {
+      font-size: 28px;
+      max-width: 100%;
+    }
+
+    &__season {
+      margin-top: 10px;
+      font-size: 11px;
+    }
+
+    &__button {
+      height: 54px;
+      padding: 0 18px;
+      font-size: 10px;
+
+      span:last-child {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .issue-card {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+
+    &__image img {
+      transition: filter 0.3s ease;
+    }
+  }
+
+  .issue-section__line-fill {
+    transition: none;
+  }
+}

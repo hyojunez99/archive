@@ -1,0 +1,288 @@
+@use "../../../assets/scss/font" as f;
+@use "../../../assets/scss/mixin" as m;
+
+.footer {
+  background: #050505;
+  color: #fff;
+
+  padding: 180px 0;
+
+  &__inner {
+    width: min(1700px, calc(100% - 160px));
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 160px;
+
+    align-items: start;
+  }
+
+  &__eyebrow {
+    display: inline-block;
+
+    margin-bottom: 44px;
+
+    font-size: 12px;
+
+    letter-spacing: 0.34em;
+
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  &__title {
+    margin: 0;
+
+    font-family: f.$font-serif;
+
+    font-size: clamp(72px, 6vw, 104px);
+
+    line-height: 0.93;
+
+    font-weight: 400;
+
+    letter-spacing: -0.04em;
+  }
+
+  &__description {
+    margin-top: 56px;
+
+    max-width: 720px;
+
+    font-size: 21px;
+
+    line-height: 1.55;
+
+    color: rgba(255, 255, 255, 0.72);
+  }
+
+  &__right {
+    padding-top: 110px;
+  }
+
+  &__input-wrap {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+
+    padding-bottom: 18px;
+  }
+
+  input {
+    width: 100%;
+
+    background: none;
+
+    border: none;
+
+    outline: none;
+
+    color: white;
+
+    font-size: 24px;
+
+    font-family: inherit;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.38);
+    }
+  }
+
+  &__button {
+    margin-top: 34px;
+
+    border: none;
+
+    background: none;
+
+    padding: 0;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    letter-spacing: 0.24em;
+
+    text-transform: uppercase;
+
+    transition: 0.35s;
+
+    position: relative;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+
+      bottom: -10px;
+
+      width: 0;
+
+      height: 1px;
+
+      background: white;
+
+      transition: 0.35s;
+    }
+
+    &:hover {
+      letter-spacing: 0.3em;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  &__notice {
+    margin-top: 48px;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    letter-spacing: 0.08em;
+
+    color: rgba(255, 255, 255, 0.35);
+  }
+
+  @media (max-width: 1280px) {
+    padding: 140px 0;
+
+    &__inner {
+      width: calc(100% - 120px);
+      gap: 100px;
+    }
+
+    &__right {
+      padding-top: 60px;
+    }
+
+    &__description {
+      font-size: 19px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 120px 0;
+
+    &__inner {
+      width: calc(100% - 80px);
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    &__right {
+      padding-top: 0;
+    }
+
+    &__eyebrow {
+      margin-bottom: 32px;
+    }
+
+    &__title {
+      font-size: clamp(56px, 5.5vw, 80px);
+    }
+
+    &__description {
+      margin-top: 40px;
+      font-size: 17px;
+    }
+
+    input {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding: 80px 0;
+
+    &__inner {
+      width: calc(100% - 48px);
+      grid-template-columns: 1fr;
+      gap: 52px;
+    }
+
+    &__eyebrow {
+      margin-bottom: 24px;
+      font-size: 11px;
+    }
+
+    &__title {
+      font-size: clamp(48px, 12vw, 64px);
+    }
+
+    &__description {
+      margin-top: 28px;
+      font-size: 16px;
+      max-width: 100%;
+    }
+
+    &__right {
+      padding-top: 0;
+    }
+
+    input {
+      font-size: 18px;
+    }
+
+    &__button {
+      margin-top: 28px;
+      font-size: 12px;
+    }
+
+    &__notice {
+      margin-top: 36px;
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 64px 0;
+
+    &__inner {
+      width: calc(100% - 40px);
+      gap: 40px;
+    }
+
+    &__title {
+      font-size: clamp(40px, 13vw, 56px);
+    }
+
+    &__description {
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    input {
+      font-size: 16px;
+    }
+
+    &__button {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+    }
+
+    &__notice {
+      margin-top: 28px;
+      font-size: 11px;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer__button {
+    transition: none;
+
+    &::after {
+      transition: none;
+    }
+  }
+}
