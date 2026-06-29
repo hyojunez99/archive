@@ -23,7 +23,7 @@ const IssueDetailPage = () => {
       <section className="issue-hero">
         <img
           className="issue-hero__image"
-          src={`/images/${issue.hero.heroImage}`}
+          src={`${process.env.PUBLIC_URL}/images/${issue.hero.heroImage}`}
           alt={issue.hero.title}
         />
 
@@ -53,13 +53,19 @@ const IssueDetailPage = () => {
         </div>
 
         <div className="issue-intro__image">
-          <img src={`/images/${issue.intro.image}`} alt={issue.hero.title} />
+          <img
+            src={`${process.env.PUBLIC_URL}/images/${issue.intro.image}`}
+            alt={issue.hero.title}
+          />
         </div>
       </section>
 
       <section className="issue-story">
         <div className="issue-story__image">
-          <img src={`/images/${issue.story.image}`} alt={issue.hero.title} />
+          <img
+            src={`${process.env.PUBLIC_URL}/images/${issue.story.image}`}
+            alt={issue.hero.title}
+          />
         </div>
 
         <div className="issue-story__text">
@@ -86,7 +92,7 @@ const IssueDetailPage = () => {
           {issue.gallery.map((image, index) => (
             <img
               key={index}
-              src={`/images/${image}`}
+              src={`${process.env.PUBLIC_URL}/images/${image}`}
               alt={`${issue.hero.title} ${index + 1}`}
             />
           ))}
@@ -105,7 +111,10 @@ const IssueDetailPage = () => {
               to={`/issue/${Number(item.id)}`}
               className="issue-related__card"
             >
-              <img src={`/images/${item.coverImage}`} alt={item.title} />
+              <img
+                src={`${process.env.PUBLIC_URL}/images/${item.coverImage}`}
+                alt={item.title}
+              />
 
               <div className="overlay">
                 <span>{item.season}</span>

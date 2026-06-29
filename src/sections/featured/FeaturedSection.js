@@ -8,7 +8,10 @@ const FeaturedSection = () => {
   return (
     <section className="featured">
       <div className="featured__image">
-        <img src={`/images/${item.image}`} alt={item.title} />
+        <img
+          src={`${process.env.PUBLIC_URL}/images/${item.image}`}
+          alt={item.title}
+        />
       </div>
 
       <div className="featured__content">

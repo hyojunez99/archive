@@ -91,7 +91,7 @@ const IssueCard = ({ issue }) => {
       <div className="issue-card__image">
         <img
           ref={imageRef}
-          src={`/images/${issue.coverImage}`}
+          src={`${process.env.PUBLIC_URL}/images/${issue.coverImage}`}
           alt={issue.title}
         />
 
